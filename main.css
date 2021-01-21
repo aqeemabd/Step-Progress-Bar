@@ -1,0 +1,95 @@
+*{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+body{
+    background: rgb(63, 63, 63);
+}
+
+h1{
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+.hidden{
+    display: none;
+}
+
+button{
+    padding: 5px 10px;
+    border: 1px solid white;
+    background: none;
+    transition: 250ms background-color;
+    color: white;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+button:disabled:hover{
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+.text-center{
+    text-align: center;
+}
+
+.container{
+    max-width: 500px;
+    margin: 20px auto 0 auto;
+    padding: 40px;
+}
+
+#stepProgressBar{
+    display: flex;
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#content{
+    color: white;
+}
+
+.step{
+    text-align: center;
+}
+
+.step-text{
+    margin-bottom: 10px;
+    color: rgb(170, 185, 252);
+}
+
+.bullet{
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    border: 1px solid rgb(170, 185, 252);
+    color: rgb(98, 117, 199);
+    display: inline-block;
+    position: relative;
+    transition: background-color 500ms;
+    line-height: 20px;
+}
+
+.bullet.completed{
+    color: white;
+    background-color: rgb(98, 117, 199);
+}
+
+.bullet.completed::after{
+    content: '';
+    position: absolute;
+    width: 54px;
+    height: 1px;
+    background-color: rgb(98, 117, 199);
+    right: -61px;
+    bottom: 10px;
+}
